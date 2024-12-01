@@ -5,7 +5,9 @@
 package ControlEmpleados;
 
 
+import ControlEmpleados.AsistenciasEmpleados.frmAsistenciasEmpleado;
 import ControlEmpleados.GestionEmpleados.frmGestionEmpleados;
+import ControlEmpleados.Salarios.frmSalarios;
 
 /**
  *
@@ -137,8 +139,8 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
 
     private void btnControlAsistenciasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnControlAsistenciasActionPerformed
         // TODO add your handling code here:
-        frmAsistencias asistencias = new frmAsistencias();
-        asistencias.setVisible(true);
+        frmAsistenciasEmpleado frmAsistenciasEmpleados = new frmAsistenciasEmpleado();
+        frmAsistenciasEmpleados.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnControlAsistenciasActionPerformed
 
