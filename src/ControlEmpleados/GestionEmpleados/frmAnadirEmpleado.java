@@ -16,7 +16,8 @@ public class frmAnadirEmpleado extends javax.swing.JFrame {
     /**
      * Creates new form frmAnadirEmpleado
      */
-    public frmAnadirEmpleado() {
+    public frmAnadirEmpleado() 
+    {
         initComponents();
     }
     
@@ -164,8 +165,8 @@ public class frmAnadirEmpleado extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAnadirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnadirActionPerformed
-        // TODO add your handling code here:
-        String nombre = txtNombre.getText();
+    // TODO add your handling code here:
+    String nombre = txtNombre.getText();
     String telefono = txtTelefono.getText();
     String correo = txtCorreo.getText();
     int edad = Integer.parseInt(txtEdad.getText());
@@ -192,11 +193,6 @@ public class frmAnadirEmpleado extends javax.swing.JFrame {
     txtEdad.setText("");
     cmbCargo.setSelectedIndex(0);  // Reiniciar el JComboBox a la primera opción
     cmbSeguro.setSelectedIndex(0);  // Reiniciar el JComboBox a la primera opción
-}
-
-// Método para generar un ID único (puedes personalizar esta lógica)
-private int generarId() {
-    return (int) (Math.random() * 10000);  // Genera un ID aleatorio entre 0 y 9999
     }//GEN-LAST:event_btnAnadirActionPerformed
 
     private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed

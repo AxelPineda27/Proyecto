@@ -5,7 +5,6 @@
 package ControlEmpleados.GestionEmpleados;
 
 import ControlEmpleados.Empleado;
-import ControlEmpleados.GestionEmpleados.EmpleadosManager;
 import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -14,7 +13,8 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author anton
  */
-public class frmEliminarEmpleado extends javax.swing.JFrame {
+public class frmEliminarEmpleado extends javax.swing.JFrame 
+{
 
     /**
      * Creates new form frmEliminarEmpleado
@@ -24,7 +24,8 @@ public class frmEliminarEmpleado extends javax.swing.JFrame {
     }
     
     // Método para llenar la tabla
-    private void llenarTabla() {
+    private void llenarTabla() 
+    {
         DefaultTableModel modelo = (DefaultTableModel) tblEmpleados.getModel();
         modelo.setRowCount(0); // Limpiar la tabla antes de llenarla
 
@@ -32,8 +33,10 @@ public class frmEliminarEmpleado extends javax.swing.JFrame {
         List<Empleado> empleados = EmpleadosManager.obtenerEmpleados();
 
         // Agregar cada empleado como una fila en la tabla
-        for (Empleado emp : empleados) {
-            modelo.addRow(new Object[]{
+        for (Empleado emp : empleados) 
+        {
+            modelo.addRow(new Object[]
+            {
                 emp.getId(),
                 emp.getNombre(),
                 emp.getCargo(),
@@ -46,11 +49,12 @@ public class frmEliminarEmpleado extends javax.swing.JFrame {
     }
 
     // Método para eliminar un empleado
-    // Método para eliminar un empleado
-    private void eliminarEmpleado() {
+    private void eliminarEmpleado() 
+    {
         int filaSeleccionada = tblEmpleados.getSelectedRow();
 
-        if (filaSeleccionada == -1) {
+        if (filaSeleccionada == -1) 
+        {
             // Si no hay fila seleccionada, mostrar un mensaje de error
             JOptionPane.showMessageDialog(this, "Por favor, selecciona un empleado para eliminar.", "Error", JOptionPane.ERROR_MESSAGE);
             return; // Salir del método
@@ -62,14 +66,19 @@ public class frmEliminarEmpleado extends javax.swing.JFrame {
         // Confirmar la eliminación con el usuario
         int confirmacion = JOptionPane.showConfirmDialog(this, "¿Estás seguro de que deseas eliminar este empleado?", "Confirmar eliminación", JOptionPane.YES_NO_OPTION);
 
-        if (confirmacion == JOptionPane.YES_OPTION) {
+        if (confirmacion == JOptionPane.YES_OPTION) 
+        {
             // Llamar al método para eliminar el empleado
             boolean eliminado = EmpleadosManager.eliminarEmpleado(idEmpleado);
 
-            if (eliminado) {
+            if (eliminado) 
+            {
                 JOptionPane.showMessageDialog(this, "Empleado eliminado exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
                 llenarTabla(); // Actualizar la tabla después de eliminar
-            } else {
+            } 
+            
+            else 
+            {
                 JOptionPane.showMessageDialog(this, "Error al eliminar el empleado. No se encontró el ID.", "Error", JOptionPane.ERROR_MESSAGE);
             }
         }

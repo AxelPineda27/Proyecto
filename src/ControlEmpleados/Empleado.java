@@ -8,7 +8,8 @@ package ControlEmpleados;
  *
  * @author anton
  */
-   public class Empleado {
+public class Empleado 
+{
     private int id;
     private String nombre;
     private String cargo;
@@ -17,7 +18,8 @@ package ControlEmpleados;
     private int edad;
     private boolean seguro;
 
-    public Empleado(String nombre, String cargo, String telefono, String correo, int edad, boolean seguro) {
+    public Empleado(String nombre, String cargo, String telefono, String correo, int edad, boolean seguro) 
+    {
         this.nombre = nombre;
         this.cargo = cargo;
         this.telefono = telefono;
@@ -26,62 +28,73 @@ package ControlEmpleados;
         this.seguro = seguro;
     }
 
-    public int getId() {
+    public int getId() 
+    {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(int id) 
+    {
         this.id = id;
     }
     
-    public String getNombre() {
+    public String getNombre() 
+    {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
+    public void setNombre(String nombre) 
+    {
         this.nombre = nombre;
     }
 
-    public String getCargo() {
+    public String getCargo() 
+    {
         return cargo;
     }
 
-    public void setCargo(String cargo) {
+    public void setCargo(String cargo) 
+    {
         this.cargo = cargo;
     }
 
-    public String getTelefono() {
+    public String getTelefono() 
+    {
         return telefono;
     }
 
-    public void setTelefono(String telefono) {
+    public void setTelefono(String telefono) 
+    {
         this.telefono = telefono;
     }
 
-    public String getCorreo() {
+    public String getCorreo() 
+    {
         return correo;
     }
 
-    public void setCorreo(String correo) {
+    public void setCorreo(String correo) 
+    {
         this.correo = correo;
     }
 
-    public int getEdad() {
+    public int getEdad() 
+    {
         return edad;
     }
 
-    public void setEdad(int edad) {
+    public void setEdad(int edad) 
+    {
         this.edad = edad;
     }
 
-    public boolean isSeguro() {
+    public boolean isSeguro() 
+    {
         return seguro;
     }
 
-    public void setSeguro(boolean seguro) {
+    public void setSeguro(boolean seguro) 
+    {
         this.seguro = seguro;
     }
-
-   
-    
 }

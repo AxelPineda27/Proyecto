@@ -130,7 +130,6 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
 
     private void btnGestionEmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGestionEmpleadosActionPerformed
         // TODO add your handling code here:
-        
         frmGestionEmpleados gestionEmpleados = new frmGestionEmpleados();
         gestionEmpleados.setVisible(true);
         this.setVisible(false);
@@ -153,7 +152,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
 
     private void btnCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarSesionActionPerformed
         // TODO add your handling code here:
-        System.exit(0);  // Cerrar la aplicación
+        System.exit(0);  //Cerrar la aplicación
     }//GEN-LAST:event_btnCerrarSesionActionPerformed
     
     /**

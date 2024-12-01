@@ -17,11 +17,13 @@ public class frmVerEmpleados extends javax.swing.JFrame {
     /**
      * Creates new form frmVerEmpleados
      */
-    public frmVerEmpleados() {
+    public frmVerEmpleados() 
+    {
         initComponents();
     }
     
-    private void llenarTabla() {
+    private void llenarTabla() 
+    {
         DefaultTableModel modelo = (DefaultTableModel) tblEmpleados.getModel();
         modelo.setRowCount(0); // Limpiar tabla antes de llenarla
 
@@ -29,7 +31,8 @@ public class frmVerEmpleados extends javax.swing.JFrame {
         List<Empleado> listaEmpleados = EmpleadosManager.obtenerEmpleados();
 
         // Agregar las filas correspondientes para cada empleado
-        for (Empleado emp : listaEmpleados) {
+        for (Empleado emp : listaEmpleados) 
+        {
             modelo.addRow(new Object[]{
                 emp.getId(), // ID del empleado
                 emp.getNombre(),

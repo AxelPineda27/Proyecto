@@ -37,7 +37,7 @@ public class frmIniciarSesion1 extends javax.swing.JFrame {
 
         // Verifica si el usuario y la contraseña son correctos
         if (usuarios.containsKey(usuario) && usuarios.get(usuario).equals(contrasena)) {
-            JOptionPane.showMessageDialog(this, "Inicio de sesión exitoso. ¡Bienvenido, " + usuario + "!");
+            JOptionPane.showMessageDialog(this, "Inicio de sesion exitoso. ¡Bienvenido, " + usuario + "!");
             abrirMenuPrincipal();
         } else {
             lblMensaje.setText("Usuario o contraseña incorrectos.");

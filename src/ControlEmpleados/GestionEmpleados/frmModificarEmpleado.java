@@ -14,12 +14,14 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author anton
  */
-public class frmModificarEmpleado extends javax.swing.JFrame {
+public class frmModificarEmpleado extends javax.swing.JFrame 
+{
 
     /**
      * Creates new form frmModificarEmpleado
      */
-    public frmModificarEmpleado() {
+    public frmModificarEmpleado() 
+    {
         initComponents();
         cargarEmpleadosEnTabla();
         tblEmpleados.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
@@ -28,10 +30,12 @@ public class frmModificarEmpleado extends javax.swing.JFrame {
     private Empleado empleadoSeleccionado;
     
     
-    private void cargarEmpleadosEnTabla() {
+    private void cargarEmpleadosEnTabla() 
+    {
     List<Empleado> empleados = EmpleadosManager.obtenerTodosEmpleados();
 
-    if (empleados == null || empleados.isEmpty()) {
+    if (empleados == null || empleados.isEmpty()) 
+    {
         JOptionPane.showMessageDialog(this, "No hay empleados para mostrar", "Error", JOptionPane.ERROR_MESSAGE);
         return; 
     }
@@ -41,7 +45,8 @@ public class frmModificarEmpleado extends javax.swing.JFrame {
 
     
 
-    for (Empleado empleado : empleados) {;
+    for (Empleado empleado : empleados) 
+    {
         Object[] fila = new Object[7];
         fila[0] = empleado.getId();
         fila[1] = empleado.getNombre();
@@ -54,61 +59,7 @@ public class frmModificarEmpleado extends javax.swing.JFrame {
         modelo.addRow(fila);  // Añadir fila a la tabla
     }
 }
-   
-    private void llenarCampos() {
-    if (empleadoSeleccionado != null) {
-        // Llenar los campos de texto con los datos del empleado
-        txtNombre.setText(empleadoSeleccionado.getNombre());
-        txtTelefono.setText(empleadoSeleccionado.getTelefono());
-        txtEdad.setText(String.valueOf(empleadoSeleccionado.getEdad()));
-        
-        // Llenar el campo de correo (si es necesario)
-        txtCorreo.setText(empleadoSeleccionado.getCorreo());
-        
-        // Cargar el combo box de Cargo con el valor del empleado
-        cmbCargo.setSelectedItem(empleadoSeleccionado.getCargo());
-
-        // Cargar el combo box de Seguro con el valor del empleado
-        if (empleadoSeleccionado.isSeguro()) {
-            cmbSeguro.setSelectedItem("Sí");
-        } else {
-            cmbSeguro.setSelectedItem("No");
-        }
-    } else {
-        // Si no se ha seleccionado un empleado, limpiar los campos
-        txtNombre.setText("");
-        txtTelefono.setText("");
-        txtEdad.setText("");
-        txtCorreo.setText("");
-        cmbCargo.setSelectedIndex(0); // O el índice por defecto que desees
-        cmbSeguro.setSelectedIndex(0); // Por defecto, "Sí" o "No"
-    }
-}
-
-    private void modificarEmpleado() {
-        // Obtener los valores de los campos del formulario
-        String nombre = txtNombre.getText();
-        String cargo = (String) cmbCargo.getSelectedItem();
-        String telefono = txtTelefono.getText();
-        String correo = txtCorreo.getText();
-        int edad = Integer.parseInt(txtEdad.getText());
-        boolean seguro = cmbSeguro.getSelectedItem().equals("Sí");
-
-        // Llamamos al método modificarEmpleado de EmpleadosManager
-        boolean exito = EmpleadosManager.modificarEmpleado(empleadoSeleccionado.getId(), nombre, cargo, telefono, correo, edad, seguro);
-
-        if (exito) {
-            JOptionPane.showMessageDialog(this, "Empleado modificado exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
-            this.dispose(); // Cierra el formulario
-            new frmVerEmpleados().setVisible(true); // Vuelve al formulario de ver empleados
-        } else {
-            JOptionPane.showMessageDialog(this, "Error al modificar el empleado.", "Error", JOptionPane.ERROR_MESSAGE);
-        }
-    }
-
-
-
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -282,7 +233,8 @@ public class frmModificarEmpleado extends javax.swing.JFrame {
     private void btnAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarActionPerformed
         // TODO add your handling code here:
         // Verifica si se ha seleccionado un empleado
-    if (empleadoSeleccionado == null) {
+    if (empleadoSeleccionado == null) 
+    {
         JOptionPane.showMessageDialog(this, "Por favor, selecciona un empleado antes de modificar.", "Advertencia", JOptionPane.WARNING_MESSAGE);
         return; // Salir si no hay empleado seleccionado
     }
@@ -298,11 +250,15 @@ public class frmModificarEmpleado extends javax.swing.JFrame {
     // Llamar al método modificarEmpleado de EmpleadosManager
     boolean exito = EmpleadosManager.modificarEmpleado(empleadoSeleccionado.getId(), nombre, cargo, telefono, correo, edad, seguro);
 
-    if (exito) {
+    if (exito) 
+    {
         JOptionPane.showMessageDialog(this, "Empleado modificado exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
         this.dispose(); // Cerrar el formulario de modificación
         new frmVerEmpleados().setVisible(true); // Abrir el formulario de ver empleados
-    } else {
+    } 
+    
+    else 
+    {
         JOptionPane.showMessageDialog(this, "Error al modificar el empleado.", "Error", JOptionPane.ERROR_MESSAGE);
     }
     }//GEN-LAST:event_btnAceptarActionPerformed
@@ -325,7 +281,8 @@ public class frmModificarEmpleado extends javax.swing.JFrame {
         // Verifica que se haya hecho clic en una fila válida (no en los encabezados)
     int row = tblEmpleados.getSelectedRow();
     
-    if (row != -1) {
+    if (row != -1) 
+    {
         // Obtiene el ID del empleado seleccionado (asumiendo que la primera columna contiene el ID)
         int empleadoId = (int) tblEmpleados.getValueAt(row, 0); // O usa el índice de columna adecuado
         
@@ -333,7 +290,8 @@ public class frmModificarEmpleado extends javax.swing.JFrame {
         empleadoSeleccionado = EmpleadosManager.obtenerEmpleadoPorId(empleadoId);
 
         // Cargar los datos del empleado en los campos del formulario
-        if (empleadoSeleccionado != null) {
+        if (empleadoSeleccionado != null) 
+        {
             txtNombre.setText(empleadoSeleccionado.getNombre());
             cmbCargo.setSelectedItem(empleadoSeleccionado.getCargo());
             txtTelefono.setText(empleadoSeleccionado.getTelefono());
