@@ -5,6 +5,7 @@
 package ControlEmpleados.GestionEmpleados;
 
 import ControlEmpleados.Empleado;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /**
@@ -198,8 +199,9 @@ public class frmAnadirEmpleado extends javax.swing.JFrame {
     private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
         // TODO add your handling code here:                                         
         this.dispose();  // Cierra el formulario actual
-    // Aquí podrías abrir el formulario principal, si lo necesitas
-     new frmGestionEmpleados().setVisible(true);
+        frmGestionEmpleados frame = new frmGestionEmpleados();  
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);  
+        frame.setVisible(true); 
     }//GEN-LAST:event_btnVolverActionPerformed
         
     /**
@@ -232,7 +234,9 @@ public class frmAnadirEmpleado extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new frmAnadirEmpleado().setVisible(true);
+            frmAnadirEmpleado frame = new frmAnadirEmpleado();  
+            frame.setExtendedState(JFrame.MAXIMIZED_BOTH);  
+            frame.setVisible(true); 
             }
         });
     }

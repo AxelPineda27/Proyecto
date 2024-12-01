@@ -10,6 +10,7 @@ package ControlEmpleados;
  */
 import javax.swing.JOptionPane;
 import java.util.HashMap;
+import javax.swing.JFrame;
 public class frmIniciarSesion1 extends javax.swing.JFrame {
 
     /**
@@ -47,8 +48,9 @@ public class frmIniciarSesion1 extends javax.swing.JFrame {
     // Método para abrir el menú principal después de iniciar sesión correctamente
     private void abrirMenuPrincipal() {
         this.dispose(); // Cierra la ventana actual
-        frmMenuPrincipal menu = new frmMenuPrincipal();  // Abre el menú principal
-        menu.setVisible(true);
+        frmMenuPrincipal frame = new frmMenuPrincipal();  
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);  
+        frame.setVisible(true);  
     }
 
     /**
@@ -194,7 +196,9 @@ public class frmIniciarSesion1 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new frmIniciarSesion1().setVisible(true);
+            frmIniciarSesion1 frame = new frmIniciarSesion1();  //Crea la instancia del formulario
+            frame.setExtendedState(JFrame.MAXIMIZED_BOTH);  //Maximiza la ventana
+            frame.setVisible(true);  
             }
         });
     }

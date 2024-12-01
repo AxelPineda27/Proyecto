@@ -6,6 +6,7 @@ package ControlEmpleados.GestionEmpleados;
 
 import ControlEmpleados.Empleado;
 import java.util.List;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.ListSelectionModel;
 import javax.swing.table.DefaultTableModel;
@@ -266,7 +267,9 @@ public class frmModificarEmpleado extends javax.swing.JFrame
     private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
         // TODO add your handling code here:
         this.dispose(); 
-        new frmGestionEmpleados().setVisible(true);
+        frmGestionEmpleados frame = new frmGestionEmpleados();  
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);  
+        frame.setVisible(true); 
     }//GEN-LAST:event_btnVolverActionPerformed
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
@@ -332,7 +335,9 @@ public class frmModificarEmpleado extends javax.swing.JFrame
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new frmModificarEmpleado().setVisible(true);
+            frmModificarEmpleado frame = new frmModificarEmpleado();  
+            frame.setExtendedState(JFrame.MAXIMIZED_BOTH);  
+            frame.setVisible(true); 
             }
         });
     }

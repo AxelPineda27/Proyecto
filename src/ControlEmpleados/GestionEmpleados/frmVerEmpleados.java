@@ -6,6 +6,7 @@ package ControlEmpleados.GestionEmpleados;
 
 import ControlEmpleados.Empleado;
 import java.util.List;
+import javax.swing.JFrame;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -114,7 +115,9 @@ public class frmVerEmpleados extends javax.swing.JFrame {
     private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
         // TODO add your handling code here:
         this.dispose();  // Cierra el formulario actual
-        new frmGestionEmpleados().setVisible(true);
+        frmGestionEmpleados frame = new frmGestionEmpleados();  
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);  
+        frame.setVisible(true); 
     }//GEN-LAST:event_btnVolverActionPerformed
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
@@ -152,7 +155,9 @@ public class frmVerEmpleados extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new frmVerEmpleados().setVisible(true);
+            frmVerEmpleados frame = new frmVerEmpleados();  
+            frame.setExtendedState(JFrame.MAXIMIZED_BOTH);  
+            frame.setVisible(true); 
             }
         });
     }

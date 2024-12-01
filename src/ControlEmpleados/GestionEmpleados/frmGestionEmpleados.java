@@ -5,6 +5,7 @@
 package ControlEmpleados.GestionEmpleados;
 
 import ControlEmpleados.frmMenuPrincipal;
+import javax.swing.JFrame;
 
 /**
  *
@@ -143,23 +144,26 @@ public class frmGestionEmpleados extends javax.swing.JFrame {
 
     private void txtAnadirEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAnadirEmpleadoActionPerformed
         // TODO add your handling code here:
-        frmAnadirEmpleado anadirempleado = new frmAnadirEmpleado();
-        anadirempleado.setVisible(true);
+        frmAnadirEmpleado frame = new frmAnadirEmpleado();  
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);  
+        frame.setVisible(true);
         this.setVisible(false);
         
     }//GEN-LAST:event_txtAnadirEmpleadoActionPerformed
 
     private void btnVerEmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerEmpleadosActionPerformed
         // TODO add your handling code here:
-        frmVerEmpleados verEmpleados = new frmVerEmpleados();
-        verEmpleados.setVisible(true);
+        frmVerEmpleados frame = new frmVerEmpleados();  
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);  
+        frame.setVisible(true); 
         this.setVisible(false);
     }//GEN-LAST:event_btnVerEmpleadosActionPerformed
 
     private void btnEliminarEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarEmpleadoActionPerformed
         // TODO add your handling code here:
-        frmEliminarEmpleado eliminareEmpleado = new frmEliminarEmpleado();
-        eliminareEmpleado.setVisible(true);
+        frmEliminarEmpleado frame = new frmEliminarEmpleado();  
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);  
+        frame.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnEliminarEmpleadoActionPerformed
 
@@ -167,14 +171,16 @@ public class frmGestionEmpleados extends javax.swing.JFrame {
         // TODO add your handling code here:
                                            
     this.dispose();  // Cierra el formulario actual
-    // Aquí podrías abrir el formulario principal, si lo necesitas
-    new frmMenuPrincipal().setVisible(true);
+    frmMenuPrincipal frame = new frmMenuPrincipal();  
+    frame.setExtendedState(JFrame.MAXIMIZED_BOTH);  
+    frame.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnModificarEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarEmpleadoActionPerformed
         // TODO add your handling code here:
-        frmModificarEmpleado modificarEmpleados = new frmModificarEmpleado();
-        modificarEmpleados.setVisible(true);
+        frmModificarEmpleado frame = new frmModificarEmpleado();  
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);  
+        frame.setVisible(true); 
         this.setVisible(false);
     }//GEN-LAST:event_btnModificarEmpleadoActionPerformed
 
@@ -208,7 +214,9 @@ public class frmGestionEmpleados extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new frmGestionEmpleados().setVisible(true);
+            frmGestionEmpleados frame = new frmGestionEmpleados();  
+            frame.setExtendedState(JFrame.MAXIMIZED_BOTH);  
+            frame.setVisible(true); 
             }
         });
     }

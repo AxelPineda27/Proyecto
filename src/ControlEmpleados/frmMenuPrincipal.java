@@ -8,6 +8,7 @@ package ControlEmpleados;
 import ControlEmpleados.AsistenciasEmpleados.frmAsistenciasEmpleado;
 import ControlEmpleados.GestionEmpleados.frmGestionEmpleados;
 import ControlEmpleados.Salarios.frmSalarios;
+import javax.swing.JFrame;
 
 /**
  *
@@ -132,8 +133,9 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
 
     private void btnGestionEmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGestionEmpleadosActionPerformed
         // TODO add your handling code here:
-        frmGestionEmpleados gestionEmpleados = new frmGestionEmpleados();
-        gestionEmpleados.setVisible(true);
+        frmGestionEmpleados frame = new frmGestionEmpleados();  
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);  
+        frame.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnGestionEmpleadosActionPerformed
 
@@ -186,9 +188,12 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new frmMenuPrincipal().setVisible(true);
+            public void run() { 
+            frmMenuPrincipal frame = new frmMenuPrincipal();  
+            frame.setExtendedState(JFrame.MAXIMIZED_BOTH);  
+            frame.setVisible(true);  
             }
+            
         });
     }
 
