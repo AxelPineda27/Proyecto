@@ -6,7 +6,7 @@ package ControlEmpleados;
 
 /**
  *
- * @author anton
+ * @author anton xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
  */
 
 import java.time.LocalDate;
