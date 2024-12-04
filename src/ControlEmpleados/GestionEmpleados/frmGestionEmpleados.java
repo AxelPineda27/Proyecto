@@ -72,7 +72,7 @@ public class frmGestionEmpleados extends javax.swing.JFrame {
                 txtAnadirEmpleadoActionPerformed(evt);
             }
         });
-        jPanel1.add(txtAnadirEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 110, 156, -1));
+        jPanel1.add(txtAnadirEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, 156, -1));
 
         btnEliminarEmpleado.setBackground(new java.awt.Color(102, 153, 255));
         btnEliminarEmpleado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/delete user 120x120.png"))); // NOI18N
@@ -81,7 +81,7 @@ public class frmGestionEmpleados extends javax.swing.JFrame {
                 btnEliminarEmpleadoActionPerformed(evt);
             }
         });
-        jPanel1.add(btnEliminarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 290, 156, -1));
+        jPanel1.add(btnEliminarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 290, 156, -1));
 
         btnVerEmpleados.setBackground(new java.awt.Color(102, 153, 255));
         btnVerEmpleados.setForeground(new java.awt.Color(102, 153, 255));
@@ -91,7 +91,7 @@ public class frmGestionEmpleados extends javax.swing.JFrame {
                 btnVerEmpleadosActionPerformed(evt);
             }
         });
-        jPanel1.add(btnVerEmpleados, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 110, 140, 130));
+        jPanel1.add(btnVerEmpleados, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 140, 130));
 
         btnModificarEmpleado.setBackground(new java.awt.Color(102, 153, 255));
         btnModificarEmpleado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/modify user 120x120.png"))); // NOI18N
@@ -100,7 +100,7 @@ public class frmGestionEmpleados extends javax.swing.JFrame {
                 btnModificarEmpleadoActionPerformed(evt);
             }
         });
-        jPanel1.add(btnModificarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 290, 150, -1));
+        jPanel1.add(btnModificarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 290, 150, -1));
 
         jButton1.setBackground(new java.awt.Color(102, 153, 255));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/main 120x120.png"))); // NOI18N
@@ -109,7 +109,7 @@ public class frmGestionEmpleados extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 110, -1, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 110, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -119,32 +119,32 @@ public class frmGestionEmpleados extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Modificar Usuario");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 430, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 430, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Buscar Empleado");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 250, -1, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Eliminar Usuario");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 430, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 430, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Agregar Empleado");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 250, -1, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 250, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 830, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 552, Short.MAX_VALUE)
         );
 
         pack();
