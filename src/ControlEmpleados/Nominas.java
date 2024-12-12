@@ -6,7 +6,7 @@ package ControlEmpleados;
 
 /**
  *
- * @author anton
+ * @author axl
  */
 public class Nominas {
     private int empleadoId;

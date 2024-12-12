@@ -6,7 +6,7 @@ package ControlEmpleados;
 
 /**
  *
- * @author anton
+ * @author axl
  */
 public enum RolEmpleado {
     SUPERVISOR(500.00),

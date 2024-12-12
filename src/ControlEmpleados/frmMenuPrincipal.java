@@ -4,15 +4,13 @@
  */
 package ControlEmpleados;
 
-
-import ControlEmpleados.AsistenciasEmpleados.frmAsistenciasEmpleado;
 import ControlEmpleados.GestionEmpleados.frmGestionEmpleados;
-import ControlEmpleados.Salarios.frmSalarios;
-import javax.swing.JFrame;
+
+
 
 /**
  *
- * @author anton
+ * @author axl
  */
 public class frmMenuPrincipal extends javax.swing.JFrame {
     /**
@@ -37,13 +35,9 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         btnGestionEmpleados = new javax.swing.JButton();
-        btnControlAsistencias = new javax.swing.JButton();
-        btnCalculoSalarios = new javax.swing.JButton();
         btnCerrarSesion = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -75,24 +69,6 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         });
         jPanel2.add(btnGestionEmpleados, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 156, -1));
 
-        btnControlAsistencias.setBackground(new java.awt.Color(102, 153, 255));
-        btnControlAsistencias.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cheklist 120x120.png"))); // NOI18N
-        btnControlAsistencias.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnControlAsistenciasActionPerformed(evt);
-            }
-        });
-        jPanel2.add(btnControlAsistencias, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 310, 160, -1));
-
-        btnCalculoSalarios.setBackground(new java.awt.Color(102, 153, 255));
-        btnCalculoSalarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/calculating120x120.png"))); // NOI18N
-        btnCalculoSalarios.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCalculoSalariosActionPerformed(evt);
-            }
-        });
-        jPanel2.add(btnCalculoSalarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 120, 156, -1));
-
         btnCerrarSesion.setBackground(new java.awt.Color(102, 153, 255));
         btnCerrarSesion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/out70x70.png"))); // NOI18N
         btnCerrarSesion.addActionListener(new java.awt.event.ActionListener() {
@@ -100,27 +76,17 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
                 btnCerrarSesionActionPerformed(evt);
             }
         });
-        jPanel2.add(btnCerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 330, 110, -1));
+        jPanel2.add(btnCerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, 110, -1));
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("SALIR");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 420, 60, 20));
-
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("CALCULO SALARIOS");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 260, -1, -1));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 430, 60, 20));
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("GESTION EMPLEADOS");
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, 210, 20));
-
-        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("CONTROL ASISTENCIAS");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 450, 220, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -142,21 +108,6 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         frame.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnGestionEmpleadosActionPerformed
-
-    private void btnControlAsistenciasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnControlAsistenciasActionPerformed
-        // TODO add your handling code here:
-        frmAsistenciasEmpleado frmAsistenciasEmpleados = new frmAsistenciasEmpleado();
-        frmAsistenciasEmpleados.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_btnControlAsistenciasActionPerformed
-
-    private void btnCalculoSalariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalculoSalariosActionPerformed
-        // TODO add your handling code here:
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        frmSalarios calculoSalarios = new frmSalarios();
-        calculoSalarios.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_btnCalculoSalariosActionPerformed
 
     private void btnCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarSesionActionPerformed
         // TODO add your handling code here:
@@ -201,15 +152,11 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCalculoSalarios;
     private javax.swing.JButton btnCerrarSesion;
-    private javax.swing.JButton btnControlAsistencias;
     private javax.swing.JButton btnGestionEmpleados;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables

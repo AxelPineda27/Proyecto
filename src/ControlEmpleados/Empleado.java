@@ -6,7 +6,7 @@ package ControlEmpleados;
 
 /**
  *
- * @author anton
+ * @author axl
  */
 public class Empleado 
 {

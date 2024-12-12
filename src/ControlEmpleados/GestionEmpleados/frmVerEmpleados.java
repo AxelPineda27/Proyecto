@@ -11,7 +11,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author anton
+ * @author axl
  */
 public class frmVerEmpleados extends javax.swing.JFrame {
 

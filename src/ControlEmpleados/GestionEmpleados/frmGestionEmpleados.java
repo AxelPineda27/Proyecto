@@ -9,7 +9,7 @@ import javax.swing.JFrame;
 
 /**
  *
- * @author anton
+ * @author axl
  */
 public class frmGestionEmpleados extends javax.swing.JFrame {
 

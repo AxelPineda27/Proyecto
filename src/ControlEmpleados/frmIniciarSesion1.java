@@ -6,7 +6,7 @@ package ControlEmpleados;
 
 /**
  *
- * @author anton
+ * @author axl
  */
 import javax.swing.JOptionPane;
 import java.util.HashMap;
